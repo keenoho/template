@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 100px">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="shortcut icon" href="<%= CONFIG_APP_LOGO || "" %>" />
+    <script>
+      var APPCONF = '<%- appConf %>';
+      var MODE = '<%- mode %>';
+      var ENV = '<%- env %>';
+    </script>
+    <% if (mode !=='development' ) { %>
+    <script src="http://static.keenoho.space/lib/axios.min.js"></script>
+    <script src="http://static.keenoho.space/lib/dayjs.min.js"></script>
+    <script src="http://static.keenoho.space/lib/crypto-js.min.js"></script>
+    <script src="http://static.keenoho.space/lib/clipboard.min.js"></script>
+    <script src="http://static.keenoho.space/lib/decimal.min.js"></script>
+    <script src="http://static.keenoho.space/lib/uuid.min.js"></script>
+    <script src="http://static.keenoho.space/lib/md5.min.js"></script>
+    <script src="http://static.keenoho.space/lib/vue.min.js"></script>
+    <script src="http://static.keenoho.space/lib/vue-router.min.js"></script>
+    <script src="http://static.keenoho.space/lib/vuex.min.js"></script>
+    <script src="http://static.keenoho.space/lib/keenoho/browser/sdk.umd.external.min.js"></script>
+    <% } %>
+  </head>
+
+  <body style="font-size: 14px">
+    <div id="root">loading...</div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
