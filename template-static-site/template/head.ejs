@@ -1,0 +1,20 @@
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="/favicon.ico" />
+<title>
+  <%= _.webTitle || _.name%>
+</title>
+<meta name="description" content="<%= _.webDescription %>">
+<link rel="stylesheet" href="/normalize.css?v=<%= _.version %>">
+<link rel="stylesheet" href="/module.css?v=<%= _.version %>">
+<link rel="stylesheet" href="/main.css?v=<%= _.version %>">
+<link rel="stylesheet" href="/media.css?v=<%= _.version %>">
+<script>
+  var app = "<%= _.id %>";
+  var secretkey = "<%= _.secretkey%>";
+  var systemceHost = "<%= _.systemceHost %>";
+</script>
+<script src="http://static.keenoho.space/lib/jquery.min.js"></script>
+<script src="http://static.keenoho.space/lib/keenoho/browser/sdk.umd.min.js?v=<%= _.version %>"></script>
+<script src="/main.js?v=<%= _.version %>"></script>

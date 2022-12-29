@@ -1,0 +1,23 @@
+{
+  "id": 1111111111111111,
+  "secretkey": "80C6AACE81CA46B25632EADEC94AF6B3",
+  "name": "template-static-site",
+  "output": ".gen",
+  "version": "1.0.0",
+  "systemceHost": "http://api.keenoho.space",
+  "staticHost": "http://static.keenoho.space",
+  "webHost": "http://www.keenoho.space",
+  "webTitle": "title",
+  "webDescription": "description",
+  "globalData": "global.json",
+  "pages": [
+    {
+      "path": "index.ejs",
+      "type": "normal",
+      "data": "index.json"
+    }
+  ],
+  "admin": {
+    "pages": []
+  }
+}
