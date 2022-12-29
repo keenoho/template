@@ -1,0 +1,14 @@
+{
+  "name": "template-miniapp-wx",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+  },
+  "keywords": [],
+  "author": "",
+  "license": "",
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
