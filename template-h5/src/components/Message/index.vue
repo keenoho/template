@@ -1,5 +1,5 @@
 <template>
-  <div :class="['plugin-message', customClass]" v-if="list.length > 0">
+  <div :class="['plugin-message']" v-if="list.length > 0">
     <div class="message-list">
       <template v-for="item in list" :key="item.id">
         <div :class="['item', item.customClass]">

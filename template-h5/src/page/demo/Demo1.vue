@@ -10,6 +10,8 @@
     </div>
     <div>
       <button @click="handleShowAlert">show alert</button>
+    </div>
+    <div>
       <button @click="handleShowConfirm">show confirm</button>
     </div>
   </div>
@@ -25,10 +27,10 @@ export default {
       this.$message({ message: 'hello-' + new Date().getSeconds() });
     },
     handleShowAlert() {
-      this.$loading({ duration: 3000 });
+      this.$alert({ message: 'hello-' + new Date().getSeconds() });
     },
     handleShowConfirm() {
-      this.$loading({ duration: 3000 });
+      this.$confirm({ message: 'hello-' + new Date().getSeconds() });
     },
   },
 };
