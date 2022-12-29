@@ -1,3 +1,1 @@
-# keenoho-works-display
-
-keenoho-works-display
+# template-static-site
