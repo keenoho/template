@@ -51,6 +51,7 @@ export const defaultOptions = {
   fullscreen: true,
   customClass: '',
   icon: '',
+  zIndex: 1000,
 };
 
 export default {
@@ -71,6 +72,7 @@ export default {
         fullscreen = true,
         customClass = '',
         icon = '',
+        zIndex = 1000,
       } = _options;
       this.show = show;
       this.title = title;
@@ -78,6 +80,7 @@ export default {
       this.fullscreen = fullscreen;
       this.customClass = customClass;
       this.icon = icon;
+      this.zIndex = zIndex;
 
       clearTimeout(this.timer);
       this.timer = null;
@@ -98,11 +101,11 @@ export default {
 <style lang="less" scoped>
 .plugin-loading {
   position: fixed;
+
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1000;
 
   .mask {
     position: absolute;
@@ -135,8 +138,7 @@ export default {
       box-sizing: border-box;
 
       .icon {
-        svg,
-        img {
+        svg,img {
           display: block;
           margin: 0 auto;
           width: 100px;

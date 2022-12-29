@@ -9,8 +9,12 @@ export default {
     function instanceFunc(options) {
       instance.handleSetValue({ ...defaultOptions, ...options, show: true });
     }
-    instanceFunc.show = () => {};
-    instanceFunc.close = () => {};
+    instanceFunc.show = (options) => {
+      instance.handleSetValue({ ...defaultOptions, ...options, show: true });
+    };
+    instanceFunc.close = (options) => {
+      instance.handleSetValue({ ...defaultOptions, ...options, show: false });
+    };
     app.config.globalProperties.$loading = instanceFunc;
   },
 };
