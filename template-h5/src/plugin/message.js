@@ -13,6 +13,11 @@ export default {
           instance.handleRemoveMessage(id);
         },
       };
+      if (typeof options === 'string') {
+        options = {
+          message: options
+        }
+      }
       instance.handleAddMessage({ ...defaultOptions, ...options, id });
       return obj;
     }

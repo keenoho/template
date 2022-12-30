@@ -7,9 +7,19 @@ export default {
     const instance = plugin.mount(document.createElement('div'));
     document.body.appendChild(instance.$el);
     function instanceFunc(options) {
+      if (typeof options === 'string') {
+        options = {
+          title: options
+        }
+      }
       instance.handleSetValue({ ...defaultOptions, ...options, show: true });
     }
     instanceFunc.show = (options) => {
+      if (typeof options === 'string') {
+        options = {
+          title: options
+        }
+      }
       instance.handleSetValue({ ...defaultOptions, ...options, show: true });
     };
     instanceFunc.close = (options) => {

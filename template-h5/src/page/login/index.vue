@@ -33,7 +33,7 @@ export default {
     }),
     async handleLogin() {
       if (!this.account || !this.password) {
-        return this.$message.error('请输入账号密码');
+        return this.$message('请输入账号密码');
       }
       if (!this.config.signature) {
         await initData();
@@ -45,12 +45,12 @@ export default {
           password: md5(this.password),
         })
         .catch((err) => {
-          this.$message.error(err.msg);
+          this.$message(err.msg);
         });
       if (!res) {
         return;
       }
-      this.$message.success('登陆成功');
+      this.$message('登陆成功');
       this.setSignature(res.data.signature);
       this.setInfo(res.data.user);
       this.$router.push({ path: '/' });

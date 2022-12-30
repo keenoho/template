@@ -25,7 +25,7 @@ const router = createRouter({
           path: '/',
           component: () => import('@/page/home/index.vue'),
           meta: {
-            title: '管理后台',
+            title: 'home',
           },
         },
         ...routes,
